@@ -1,4 +1,4 @@
-def total(marks_list):
+def get_total(marks_list):
     return sum(marks_list) 
     
 def avg(marks_list):
@@ -31,16 +31,14 @@ for f in range(1,num_students+1):
         marks=int(input(f"Enter the Marks of subject {i}:"))
         marks_list.append(marks)
     
-    total=total(marks_list)
-
-    average=avg(marks_list)
-    
-    stu_grade=grade(average)
+    total_marks = get_total(marks_list)
+    average = avg(marks_list)
+    stu_grade = grade(average)
 
     student_report={
         "name":stu_name,
         "marks":marks_list,
-        "total":total,
+        "total":total_marks,
         "average":average,
         "grade":stu_grade
     }
